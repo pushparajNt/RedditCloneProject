@@ -1,5 +1,7 @@
 package com.pushparaj.redditclone.model;
 
+import java.time.Instant;
+
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -26,7 +28,7 @@ public class VerificationToken {
 	private Long id;
 	private String token;
 	@OneToOne( fetch = FetchType.LAZY)
-	private String user;
-	private String expiryToken;
+	private User user;
+	private Instant expiryToken;
 	
 }
